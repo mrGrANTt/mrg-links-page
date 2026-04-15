@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+:root {
+  --bg: #10130f;
+  --text: #ffffff;
+
+  --accent1: #70ff92;
+  --accent2: #6ec8fa;
+  --accent3: #ffc8ff;
+  
+  --card: rgba(255,255,255,0.03);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Varela Round', sans-serif;
+}
+
+body {
+  transition: background 0.3s, color 0.3s;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+body.light  {
+  --bg: #c2dac4;
+  --text: #111111;
+
+  --accent1: #5dd378;
+  --accent2: #5ba3ca;
+  --accent3: #c79dc7;
+
+  --card: rgba(0,0,0,0.05);
+}
+
+.info {
+  text-align: center;
+  padding: 50px 20px;
+
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.avatar {
+  width: 120px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+
+  border: 2px solid var(--accent1);
+}
+
+h1 {
+  font-size: 28px;
+  color: var(--accent1);
+}
+
+.bio {
+  opacity: 0.7;
+}
+
+.extra {
+  font-size: 14px;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 10px auto;
+  width: 220px;
+  padding: 10px;
+
+  border: 1px solid var(--accent2);
+  border-radius: 12px;
+
+  text-decoration: none;
+  color: var(--main);
+
+  background: var(--card);
+  backdrop-filter: blur(5px);
+
+  transition: 0.2s;
+}
+
+.links a:hover {
+  background: var(--accent2);
+  color: black;
+}
+
+.soc {
+  width: 20px;
+  margin-right: 10px;
+  border-radius: 6px;
+}
+
+
+
+.theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+
+  border: none;
+  cursor: pointer;
+
+  background: var(--card);
+  color: var(--text);
+
+  font-size: 18px;
+
+  backdrop-filter: blur(6px);
+  transition: 0.2s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+
+
+#glitch {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+
+.gallery {
+  column-count: 3;
+  column-gap: 10px;
+
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+.gallery img {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 10px;
+
+  opacity: 0.9;
+  transition: 0.2s;
+  break-inside: avoid;
+
+  border: 1px solid var(--accent1);
+}
+
+.gallery img:hover {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 2;
+  }
+}
