@@ -19,6 +19,9 @@ canvas.height = window.innerHeight;
 let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
 let trail = [];
 let colors = [];
+const glitchClasses = [
+  "glitch-rgb"
+];
 
 if (!isMobile) {
     window.addEventListener("mousemove", (e) => {
@@ -35,7 +38,7 @@ window.addEventListener("resize", () => {
 function drawGlitchParticles() {
   const isLight = document.body.classList.contains("light");
 
-  ctx.globalCompositeOperation = isLight ? "multiply" : "lighter";
+
 
   for (let i = 0; i < PARTICLES; i++) {
     const x = Math.random() * canvas.width;
@@ -116,6 +119,36 @@ function drawTrail() {
   trail = trail.filter(p => p.life > 0);
 }
 
+function randomGlitch() {
+  const elements = document.querySelectorAll(".links a, .gallery img, .info p, .info h1");
+  if (elements.length === 0) return;
+
+  const el = elements[Math.floor(Math.random() * elements.length)];
+  if (el.tagName === "IMG") {
+    glitchImage(el);
+  } else {
+    const effect = glitchClasses[Math.floor(Math.random() * glitchClasses.length)];
+    el.classList.add(effect);
+
+    setTimeout(() => {
+      el.classList.remove(effect);
+    }, 150 + Math.random() * 200);
+  }
+
+}
+
+function glitchImage(el) {
+  el.style.filter = `
+    contrast(1.5)
+    saturate(1.5)
+    hue-rotate(${Math.random() * 40 - 20}deg)
+  `;
+
+  setTimeout(() => {
+    el.style.filter = "";
+  }, 150 + Math.random() * 200);
+}
+
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   if (!isMobile) {
@@ -126,6 +159,7 @@ function animate() {
     trail.shift();
   }
 
+  if (Math.random() >= 0.995) randomGlitch();
   drawGlitchParticles();
   drawTrail();
 

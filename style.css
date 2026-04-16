@@ -26,12 +26,12 @@ body {
 }
 
 body.light  {
-  --bg: #c2dac4;
+  --bg: #d8e6d9;
   --text: #111111;
 
-  --accent1: #5dd378;
-  --accent2: #5ba3ca;
-  --accent3: #c79dc7;
+  --accent1: #0f521f;
+  --accent2: #0d3144;
+  --accent3: #461246;
 
   --card: rgba(0,0,0,0.05);
 }
@@ -55,6 +55,7 @@ body.light  {
 h1 {
   font-size: 28px;
   color: var(--accent1);
+  text-shadow: 0 0 8px var(--accent1);
 }
 
 .bio {
@@ -168,4 +169,13 @@ h1 {
   .gallery {
     column-count: 2;
   }
+}
+
+
+
+
+.glitch-rgb {
+  text-shadow:
+    2px 0 red,
+    -2px 0 cyan;
 }
