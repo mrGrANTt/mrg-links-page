@@ -12,6 +12,7 @@
 }
 
 * {
+  cursor: none;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -19,6 +20,7 @@
 }
 
 body {
+
   transition: background 0.3s, color 0.3s;
   background: var(--bg);
   color: var(--text);
