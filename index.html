@@ -6,6 +6,7 @@
     <title>Links by mr_GrANTt</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="icons/logo.png">
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
   </head>
   <body>
     <canvas id="glitch"></canvas>
@@ -26,14 +27,15 @@
         <a href="https://ru.pinterest.com/mrGrANT_t/_profile/"><img src="icons/pt.png" class="soc"> Pinterest</a>
       </div>
 
-      <div class="gallery">
-        <img src="img/1.jpeg">
-        <img src="img/2.jpeg">
-        <img src="img/3.jpeg">
-        <img src="img/4.jpeg">
-        <img src="img/5.jpeg">
-        <img src="img/6.jpeg">
-        <img src="img/7.jpeg">
+      <div class="gallery" id="gallery">
+        <a href="img/ref.jpeg" data-pswp-width="7010" data-pswp-height="4166"><img src="img/pre-ref.jpeg"></a>
+        <a href="img/1.jpeg" data-pswp-width="720" data-pswp-height="562"><img src="img/1.jpeg"></a>
+        <a href="img/2.jpeg" data-pswp-width="1280" data-pswp-height="905"><img src="img/pre-2.jpeg"></a>
+        <a href="img/3.jpeg" data-pswp-width="2469" data-pswp-height="3496"><img src="img/pre-3.jpeg"></a>
+        <a href="img/4.jpeg" data-pswp-width="2480" data-pswp-height="3192"><img src="img/pre-4.jpeg"></a>
+        <a href="img/5.jpeg" data-pswp-width="1050" data-pswp-height="669"><img src="img/pre-5.jpeg"></a>
+        <a href="img/6.jpeg" data-pswp-width="2476" data-pswp-height="3039"><img src="img/pre-6.jpeg"></a>
+        <a href="img/7.jpeg" data-pswp-width="2909" data-pswp-height="4473"><img src="img/pre-7.jpeg"></a>
       </div>
 
       <button class="theme-toggle" id="themeToggle">☀️</button>
@@ -41,5 +43,6 @@
 
     <script src="glitch.js"></script>
     <script src="script.js"></script>
+    <script type="module" src="photo_swipe.js"></script>
   </body>
 </html>
