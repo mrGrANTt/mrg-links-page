@@ -120,7 +120,7 @@ function drawTrail() {
 }
 
 function randomGlitch() {
-  const elements = document.querySelectorAll(".links a, .gallery img, .info p, .info h1");
+  const elements = document.querySelectorAll(".projects a, .menu_button, .links a, .gallery img, .info p, .info h1");
   if (elements.length === 0) return;
 
   const el = elements[Math.floor(Math.random() * elements.length)];

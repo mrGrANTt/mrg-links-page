@@ -173,8 +173,53 @@ h1 {
   }
 }
 
+.selector {
+  margin-bottom: 60px;
+  padding-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 2px var(--accent2);
+}
 
+.menu_button {
+  padding: 10px 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: var(--text);
+  font-size: 18px;
 
+  border: none;
+  background-color: #00000000;
+
+  border-radius: 10px;
+  box-shadow: var(--accent2) 0px -3px;
+  backdrop-filter: blur(5px);
+
+  transition: 0.2s;
+}
+.menu_button:hover {
+  background: var(--accent2);
+  color: black;
+}
+
+.selected {
+  box-shadow: none;
+}
+
+.projects a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  color: var(--text);
+  opacity: 0.6;
+
+  transition: 0.2s;
+}
+
+.projects a:hover {
+  opacity: 1;
+}
 
 .glitch-rgb {
   text-shadow:
